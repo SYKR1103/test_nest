@@ -16,7 +16,7 @@ export class Product{
     public desc: string;
 
     @Column()
-    public price: string;
+    public price: number;
 
     @Column({default:true})
     public isSealed: Boolean;

@@ -5,13 +5,13 @@ import { ProductModule } from './product/product.module';
 import { ChulModule } from './chul/chul.module';
 import { ConfigModule } from '@nestjs/config';
 import { DatabasekimchiModule } from './databasekimchi/databasekimchi.module';
-import Joi from '@hapi/joi';
+import * as Joi from "@hapi/joi"
 
 @Module({
   imports : [
     ConfigModule.forRoot({
 
-      validationSchema : Joi.object({
+      validationSchema:Joi.object({
 
         POSTGRES_HOST : Joi.string().required(),
         POSTGRES_PORT : Joi.number().required(),
